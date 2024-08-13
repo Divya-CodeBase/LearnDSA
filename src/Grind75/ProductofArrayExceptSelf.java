@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class ProductofArrayExceptSelf {
     public static void main(String args[]) {
         productExceptSelf(new int[]{1, 2, 3, 4});
-        productExceptSelf_BruteForce(new int[]{1, 2, 3, 4});
-        productExceptSelf_Division(new int[]{1, 2, 3, 4});
-        productExceptSelf_Optimized(new int[]{1, 2, 3, 4});
+        //productExceptSelf_BruteForce(new int[]{1, 2, 3, 4});
+        //productExceptSelf_Division(new int[]{1, 2, 3, 4});
+        //productExceptSelf_Optimized(new int[]{1, 2, 3, 4});
     }
 
     //Brute Force
