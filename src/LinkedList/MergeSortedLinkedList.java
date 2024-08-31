@@ -2,9 +2,11 @@ package LinkedList;
 
 public class MergeSortedLinkedList {
     public static void main(String args[]) {
-        ListNode list1 = new ListNode(1, new ListNode(1, new ListNode(2)));
-        ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(5)));
-        System.out.println(mergeTwoLists(list1, list2));
+        ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        //System.out.println(mergeTwoLists(list1, list2));
+        System.out.println(mergeTwoLists_recur(list1, list2));
+
     }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -21,8 +23,29 @@ public class MergeSortedLinkedList {
             }
             curr = curr.next;
         }
-        curr.next = (list1 != null) ? list1 : list2;
+        curr.next = list1 == null ? list2 : list1;
         return result.next;
+
     }
+
+    public static ListNode mergeTwoLists_recur(ListNode list1, ListNode list2) {
+        if (list1 == null && list2 == null) return null;
+        if (list1 == null) return list2;
+        if (list2 == null) return list1;
+
+        ListNode result = null;
+
+        if (list1.val < list2.val) {
+            result = list1;
+            result.next = mergeTwoLists_recur(list1.next, list2);
+        } else {
+            result = list2;
+            result.next = mergeTwoLists_recur(list1, list2.next);
+        }
+        return result;
+
+
+    }
+
 
 }

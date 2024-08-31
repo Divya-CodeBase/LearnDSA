@@ -9,7 +9,8 @@ class LongestZigZagPathBinaryTree {
       /*  tree.left = new TreeNode(2);
         tree.right = new TreeNode(6);
         tree.left.left = new TreeNode(4);
-        tree.left.left.right = new TreeNode(7);
+        tree.left.left.right = new TreeNode(7);Alwarpet5_
+
         tree.left.left.right.left = new TreeNode(8);
         tree.right.left = new TreeNode(5);
         tree.right.right = new TreeNode(6);*/
